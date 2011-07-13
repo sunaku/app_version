@@ -45,11 +45,12 @@ to fake it. 'git-revcount' will count the number of commits to the repository
 and use that as the build number whereas 'git-hash' will use the first 6 digits
 of the current HEAD's hash.
 
-The plugin creates a constant APP_VERSION that contains the version number of
-the application. Calling the +to_s+ method on APP_VERSION will result in a
-properly formatted version number. APP_VERSION also has +major+, +minor+,
-+patch+, +milestone+, +build+, +branch+, +committer+, and +build_date+
-methods to retrieve the individual components of the version number.
+The plugin creates a VERSION constant in your application's namespace (such as
+YourRailsProjectName::Application::VERSION) that contains the version number
+of the application. Calling the +to_s+ method on that constant will result in
+a properly formatted version number. The constant also has +major+, +minor+,
++patch+, +milestone+, +build+, +branch+, +committer+, and +build_date+ methods
+to retrieve the individual components of the version number.
 
 == Capistrano Usage
 
