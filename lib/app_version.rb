@@ -76,7 +76,7 @@ class AppVersion
 
   # Loads the version information from a YAML file.
   def self.load(path)
-    AppVersion.new YAML::load(File.open(path))
+    AppVersion.new YAML.load_file(path)
   end
 
   def <=>(other)
